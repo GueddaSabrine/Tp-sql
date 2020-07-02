@@ -46,6 +46,56 @@
 -- # having Pays IN ('fr', 'be', 'ch', 'usa', 'ger');
 -- # 1 ligne
 --
--- # EXO8
--- # select
+
+-- # EXO9
+-- # Afficher les noms des auteurs parisiens, les titres et les prix de leurs livres
+-- # select NomAuteur, Titre, Prix
+-- # from auteur,
+-- #      titreauteur,
+-- #      titre
+-- # where auteur.IdAuteur = titreauteur.IdAuteur
+-- # and titre.IdTitre = titreauteur.IdTitre  ;
+-- #
+-- # select *
+-- # from titreauteur;
+-- #
+-- # select *
+-- # from auteur;
+-- #
+-- # select NomAuteur, titreauteur.IdTitre, titre, Prix
+-- # from auteur,
+-- #      titreauteur,
+-- #      titre
+-- # where auteur.IdAuteur = titreauteur.IdAuteur
+-- #   and titre.IdTitre = titreauteur.IdTitre  ;
+
+# EXO10
+# Pour chaque éditeur , afficher le nom de l’éditeur , les titres des livres qu’il publie,
+# les noms des magasins où ils sont vendus, le nombre d’exemplaires vendus dans chaque magasin.
+
+-- # select NomEditeur, Titre, NomMag, Qt
+-- # from editeur,
+-- #      titre,
+-- #      magasin,
+-- #      vente
+-- # where editeur.IdEditeur = titre.IdEditeur
+-- #   AND titre.IdTitre = vente.IdTitre
+-- #   AND magasin.IdMag = vente.IdMag ;
+-- # 18 lignes
+--
+-- # EXO11
+-- # Afficher les noms des auteurs qui ont vendu au moins 20 livres,
+-- # et le nombre de livres qu’ils ont vendus
+-- # (tables auteurs, titreauteur , titres, ventes).
+--
+-- select NomAuteur, SUM(Qt), Titre,
+-- from auteur,
+--      titreauteur,
+--      vente,
+--      titre
+-- where auteur.IdAuteur = titreauteur.IdAuteur
+--   AND vente.IdTitre = titre.IdTitre
+--   AND titre.IdTitre = titreauteur.IdTitre
+-- group by auteur.IdAuteur
+-- having SUM(Qt)>20 ;
 
