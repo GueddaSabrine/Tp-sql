@@ -69,9 +69,9 @@
 -- # where auteur.IdAuteur = titreauteur.IdAuteur
 -- #   and titre.IdTitre = titreauteur.IdTitre  ;
 
-# EXO10
-# Pour chaque éditeur , afficher le nom de l’éditeur , les titres des livres qu’il publie,
-# les noms des magasins où ils sont vendus, le nombre d’exemplaires vendus dans chaque magasin.
+-- # EXO10
+-- # Pour chaque éditeur , afficher le nom de l’éditeur , les titres des livres qu’il publie,
+-- # les noms des magasins où ils sont vendus, le nombre d’exemplaires vendus dans chaque magasin.
 
 -- # select NomEditeur, Titre, NomMag, Qt
 -- # from editeur,
@@ -88,14 +88,20 @@
 -- # et le nombre de livres qu’ils ont vendus
 -- # (tables auteurs, titreauteur , titres, ventes).
 --
--- select NomAuteur, SUM(Qt), Titre,
+-- select NomAuteur
 -- from auteur,
 --      titreauteur,
 --      vente,
 --      titre
 -- where auteur.IdAuteur = titreauteur.IdAuteur
---   AND vente.IdTitre = titre.IdTitre
+--   AND titre.IdTitre = vente.IdTitre
 --   AND titre.IdTitre = titreauteur.IdTitre
 -- group by auteur.IdAuteur
--- having SUM(Qt)>20 ;
+-- having SUM(Qt)>20;
+-- 10 lignes
+
+-- # EXO12 2 sous-requêtes, EXIST, ALL
+-- # Afficher les noms et prénoms par ordre alphabétique
+-- # des auteurs qui possèdent 100% de droits sur tous leurs livres !
+-- # (titreauteur .droits_pourcent = 100 pour tous les livres)
 
