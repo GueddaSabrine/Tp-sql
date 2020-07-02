@@ -1,1 +1,51 @@
-select
+-- # EXO1
+-- # select NomEditeur, Ville, Region
+-- # from editeur ;
+-- # 8 lignes
+--
+-- # EXO2
+-- # select NomEmploye, PnEmploye, DateEmbauche, PositionEmploye
+-- # from employe
+-- # where NomEmploye like'L%' AND PositionEmploye between '10' AND '100' AND DateEmbauche BETWEEN '1990-01-01' AND '1990-12-31';
+-- # 1 ligne
+--
+-- # EXO3
+-- # select NomEmploye, DateEmbauche
+-- # from employe
+-- # order by IdEditeur, NomEmploye;
+-- # 43 lignes
+--
+-- # EXO4
+-- # select NomAuteur, Pays, Adresse
+-- # from auteur
+-- # WHERE Pays IN ('FR', 'BE', 'CH')
+-- # order by Pays;
+-- # 20 lignes
+--
+-- # EXO5
+-- # select PositionEmploye as 'Position Employe'
+-- #        count(PositionEmploye), AS 'NbEmploye',
+-- #        MAX(DATE(DateEmbauche)) AS 'recent',
+-- #        MIN(DATE(DateEmbauche)) AS 'Ancien'
+-- # from    employe
+-- # group by PositionEmploye
+-- # order by Ancien ;
+-- # 14 lignes
+--
+-- # EXO6
+-- # select IdTitre,
+-- #        MAX(Droit) Droit
+-- # from droitprevu
+-- # group by IdTitre ;
+-- # 12 lignes
+--
+-- # EXO7
+-- # select NomEditeur, Pays
+-- # from editeur
+-- # group by Pays like '%s%' and '%r%'
+-- # having Pays IN ('fr', 'be', 'ch', 'usa', 'ger');
+-- # 1 ligne
+--
+-- # EXO8
+-- # select
+

@@ -1,8 +1,8 @@
-use mocodo_db;
+use mocodo_db ;
 
 -- # suppresion de la table client
 drop table if exists Client;
-# suppresion de la table commande
+-- # suppresion de la table commande
 drop table if exists Commande;
 
 
