@@ -167,5 +167,5 @@
 -- # Afficher les noms et prénoms par ordre alphabétique
 -- # des auteurs qui possèdent 100% de droits sur tous leurs livres !
 -- # (titreauteur .droits_pourcent = 100 pour tous les livres)
->>>>>>> 8d27fec5028d0ff629322e3a86896dcf9184e533
+
 
