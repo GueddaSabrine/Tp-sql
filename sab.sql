@@ -109,6 +109,7 @@
 -- # from titre;
 -- # 1 ligne
 --
+<<<<<<< HEAD
 -- # Exercice 14 :
 -- select Titre,Prix,CumulAnnuelVente >=(select sum(CumulAnnuelVente)
 -- from titre
@@ -116,6 +117,13 @@
 -- from titre
 -- order by titre;
 -- 15 lignes
+=======
+-- # Exercice 14 : 1 sous-requête utilisée dans la clause SELECT, SUM
+-- # Afficher la liste des titres dans l’ordre alphabétique
+-- # et le cumul de leurs ventes, tous magasins confondus
+-- #  (tables titres et ventes)
+-- # select Titre, CumulAnnuelVente
+>>>>>>> 258c72d640d6b3b2cc6acffc21ba1086d26dcc19
 --
 --
 -- # Exercice 15 : 1 sous-requête, MAX
